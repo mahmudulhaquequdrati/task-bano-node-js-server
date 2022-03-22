@@ -10,7 +10,13 @@ const fileUpload = require("express-fileupload");
 require("dotenv").config();
 
 // middleware
-app.use(cors());
+
+app.use(
+  cors({
+    origin: "https://task-internshala-server.herokuapp.com",
+    credentials: true,
+  })
+);
 app.use(json());
 app.use(fileUpload());
 
