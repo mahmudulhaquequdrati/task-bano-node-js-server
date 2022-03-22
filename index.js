@@ -80,13 +80,9 @@ async function run() {
 
     // get single post
     app.get("/posts", verifyToken, async (req, res) => {
-      const email = req?.headers?.email;
-      const requester = await req?.decodedEmail;
-      if (email === requester) {
-        const cursor = postCollection.find({});
-        const result = await cursor.toArray();
-        res.send(result);
-      }
+      const cursor = postCollection.find({});
+      const result = await cursor.toArray();
+      res.send(result);
     });
 
     // update comments
