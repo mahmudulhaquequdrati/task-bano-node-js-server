@@ -81,9 +81,6 @@ async function run() {
         const result = await cursor.toArray();
         res.send(result);
       }
-      // else {
-      //   res.json({ message: "you are not authorized" });
-      // }
     });
 
     // update comments
