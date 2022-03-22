@@ -14,6 +14,7 @@ app.use(cors());
 app.use(json());
 app.use(fileUpload());
 
+// firebase JWT
 admin.initializeApp({
   credential: admin.credential.applicationDefault(),
 });
