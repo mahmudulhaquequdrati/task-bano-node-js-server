@@ -13,7 +13,7 @@ require("dotenv").config();
 
 app.use(
   cors({
-    origin: "https://task-internshala-server.herokuapp.com",
+    origin: "http://localhost:3000",
     credentials: true,
   })
 );
