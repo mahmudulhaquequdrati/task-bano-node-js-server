@@ -73,7 +73,7 @@ async function run() {
     });
 
     // get every single post
-    app.get("/post", verifyToken, async (req, res) => {
+    app.get("/posts", verifyToken, async (req, res) => {
       const email = req?.headers?.email;
       const requester = await req?.decodedEmail;
       if (email === requester) {
