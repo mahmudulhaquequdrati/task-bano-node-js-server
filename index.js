@@ -13,7 +13,7 @@ require("dotenv").config();
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: ["http://localhost:3000", "https://task-internshala.web.app"],
     credentials: true,
   })
 );
